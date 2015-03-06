@@ -71,7 +71,7 @@ end
 
 function Symvan_aboutgame1(data)
         local player = Player:new(data.player);
-        a_broadcast_npc(Overlord, "Welcome to &6Code4&f. This is a 'Capture-The-Flag' game that will take place in 3 vs 3 rounds.", player);
+        a_broadcast_npc(Overlord, "Welcome to Code 4. This is a 'Capture-The-Flag' game that will take place in '3vs3' rounds.", player);
 end
 
 function Symvan_aboutgame2(data)
@@ -97,7 +97,17 @@ end
 
 function Symvan_aboutgame6(data)
 	local player = player:new(data.player);
-	a_broadcast_npc(Overlord, "If the flag is down, you must first find and kill the enemy with your flag before you can score.", player);
+	a_broadcast_npc(Overlord, "If your flag is down, you must first find and kill the enemy with your flag before you can score.", player);
+end
+
+function Symvan_aboutgame7(data)
+	local player = player:new(data.player);
+	a_broadcast_npc(Overlord, "Hidden around the map are items that you can pick up, Please do not abuse these areas.", player);
+end
+
+function Symvan_aboutgame8(data)
+	local player = player:new(data.palyer);
+	a_broadcast_npc(Overlord, "Remember, this is just a game. Play your best, and have fun.", player);
 end
 
 registerHook("INTERACT", "EventOverlord_Teams", 77, "Code4", -3, 86, -35);
@@ -111,7 +121,13 @@ registerHook("INTERACT", "EventOverlord_gscore", 77, "Code4", -3, 86, -34);
 registerHook("INTERACT", "EventOverlord_Standby", 77, "Code4", -4, 86, -35);
 registerHook("INTERACT", "EventOverlord_Gear", 77, "Code4", -2, 86, -35);
 registerHook("INTERACT", "Symvan_aboutgame1", 77, "Code4", 3, 86, -36);
-
+registerHook("INTERACT", "Symvan_aboutgame2", 77, "Code4", 2, 86, -36);
+registerHook("INTERACT", "Symvan_aboutgame3", 77, "Code4", 1, 86, -36);
+registerHook("INTERACT", "Symvan_aboutgame4", 77, "Code4", 0, 86, -36);
+registerHook("INTERACT", "Symvan_aboutgame5", 77, "Code4", -0, 86, -36);
+registerHook("INTERACT", "Symvan_aboutgame6", 77, "Code4", -1, 86, -36);
+registerHook("INTERACT", "Symvan_aboutgame7", 77, "Code4", -2, 86, -36);
+registerHook("INTERACT", "Symvan_aboutgame2", 77, "Code4", -3, 86, -36);
 
 -- Teleport
 --
