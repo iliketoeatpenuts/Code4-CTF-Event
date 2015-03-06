@@ -69,6 +69,37 @@ function EventOverlord_gscore(data)
         a_broadcast_npc(Overlord, "&aGreen Team Has Scored a Point!", player);
 end
 
+function Symvan_aboutgame1(data)
+        local player = Player:new(data.player);
+        a_broadcast_npc(Overlord, "Welcome to &6Code4&f. This is a 'Capture-The-Flag' game that will take place in 3 vs 3 rounds.", player);
+end
+
+function Symvan_aboutgame2(data)
+	local player = player:new(data.player);
+	a_broadcast_npc(Overlord, "Players must go from their base, to the enemy base, collecting the flag and bringing it back home.", player);
+	
+end
+
+function Symvan_aboutgame3(data)
+	local player = player:new(data.player);
+	a_broadcast_npc(Overlord, "In order to score a point, your flag must currently be at your base.", player);
+end
+
+function Symvan_aboutgame4(data)
+	local player = player:new(data.player);
+	a_broadcast_npc(Overlord, "You will know if you can score a point by looking at the flag on the top of your base.", player);
+end
+
+function Symvan_aboutgame5(data)
+	local player = player:new(data.player);
+	a_broadcast_npc(Overlord, "If the flag is fully raised, your flag is at home.", player);
+end
+
+function Symvan_aboutgame6(data)
+	local player = player:new(data.player);
+	a_broadcast_npc(Overlord, "If the flag is down, you must first find and kill the enemy with your flag before you can score.", player);
+end
+
 registerHook("INTERACT", "EventOverlord_Teams", 77, "Code4", -3, 86, -35);
 registerHook("INTERACT", "EventOverlord_Start30", 77, "Code4", -1, 86, -35);
 registerHook("INTERACT", "EventOverlord_Start15", 77, "Code4", 0, 86, -35);
@@ -79,6 +110,7 @@ registerHook("INTERACT", "EventOverlord_bscore", 77, "Code4", 3, 86, -34);
 registerHook("INTERACT", "EventOverlord_gscore", 77, "Code4", -3, 86, -34);
 registerHook("INTERACT", "EventOverlord_Standby", 77, "Code4", -4, 86, -35);
 registerHook("INTERACT", "EventOverlord_Gear", 77, "Code4", -2, 86, -35);
+registerHook("INTERACT", "Symvan_aboutgame1", 77, "Code4", 3, 86, -36);
 
 
 -- Teleport
